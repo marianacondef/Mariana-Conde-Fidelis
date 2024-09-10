@@ -8,9 +8,9 @@ function sum_to_n_a(n: number): number {
 
 function sum_to_n_b(n: number): number {
 	/*
-    Using recursion to calculate the sum of n numbers from 1 to n, the time complexity is O(n) since the function is called n times. 
+    Using recursion to calculate the sum of n numbers from 1 to n, the time complexity is O(n). 
     Space complexity would be O(n) as well, as n calls are made to the function and n stack frames are created. 
-    In terms of perfomance, compared to the first solution, it can be inefficient for large n due to stack overflow risks and the overhead of recursive calls but it 
+    Compared to the first solution, it can be inefficient for large n due to stack overflow risks and the overhead of recursive calls 
     */
 
     if (n <= 1) return n;
@@ -19,13 +19,21 @@ function sum_to_n_b(n: number): number {
 }
 
 function sum_to_n_c(n: number): number {
-	/* By removing the lowest set bit from n in each iteration, the time complexity is O(log n) as the number of iterations is equal to the number of bits set in n.
-    The space complexity is O(1) as the space is constant. In terms of perfomance, this solution is more efficient than the recursive solution for larger n values.
+    /*
+    Using iterative approach, the time complexity is O(n). 
+    Space complexity is O(1) as only one variable is used to store the result. 
+    This solution is more efficient than the recursive solution, as it avoids the overhead of recursive calls and stack frames.
     */
+
     let sum = 0;
-    while (n < 0) {
-        sum += n;
-        n &= n - 1;
+
+    for (let i = 1; i <= n; i++) {
+        sum += i;
     }
+
     return sum;
 }
+
+console.log(sum_to_n_a(5)); // Output: 15
+console.log(sum_to_n_b(5)); // Output: 15
+console.log(sum_to_n_c(5)); // Output: 15
