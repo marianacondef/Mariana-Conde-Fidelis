@@ -1,6 +1,6 @@
 import express, { Application, Request, Response } from 'express';
 import bodyParser from 'body-parser';
-import resourceRoutes from './routes/resourceRoutes';  // define later
+import resourceRoutes from './routes/resourceRoutes';  
 
 const app: Application = express();
 const PORT = process.env.PORT || 5000;
@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware to parse incoming request bodies
 app.use(bodyParser.json());
 
-// route for resources
+// Route for resources
 app.use('/api/resources', resourceRoutes);
 
 // Simple health check route
