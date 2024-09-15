@@ -17,7 +17,7 @@ function sum_to_n_b(n) {
 }
 function sum_to_n_c(n) {
     /*
-    Using iterative approach to calculate the sum of n numbers from 1 to n, the time complexity is O(n).
+    Using iterative approach, the time complexity is O(n).
     Space complexity is O(1) as only one variable is used to store the result.
     This solution is more efficient than the recursive solution, as it avoids the overhead of recursive calls and stack frames.
     */
@@ -30,4 +30,3 @@ function sum_to_n_c(n) {
 console.log(sum_to_n_a(5)); // Output: 15
 console.log(sum_to_n_b(5)); // Output: 15
 console.log(sum_to_n_c(5)); // Output: 15
-//# sourceMappingURL=problem4.js.map
