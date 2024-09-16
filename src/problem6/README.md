@@ -94,6 +94,8 @@ Inspired by other applications that have scoreboards (such as Duolingo), we migh
 The `` movement`` value will show whether the user has *ascended*, *descended*, or stayed the *same* on the leaderboard.
 
 ## Flow of execution
+ [![Diagram](diagram-for-scoreboard.png)](src\problem6\diagram-for-scoreboard.png)
+
 ### 1. User Action & API Call:
 User completes action, triggering a ``POST`` request to ``/update-score``, sending the ``userId`` and ``scoreIncrement``.
 
